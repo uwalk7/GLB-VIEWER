@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.viewer-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.main-content {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+
+.drop-zone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #ccc;
+  margin: 20px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.drop-text {
+  text-align: center;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+.clear-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.clear-button:hover {
+  background-color: #ff6666;
+}
+
+.clear-button:active {
+  background-color: #cc3333;
+}
+
+/* Leva panel styles */
+div[class*="leva__"] {
+  z-index: 9999 !important;
+}
+
+/* Increase Leva root panel height */
+div[class*="leva__root"] {
+  max-height: 100vh !important;
+  height: auto !important;
+}
+
+/* Remove scrollbar from Leva panel */
+div[class*="leva__root"] > div {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Color picker specific styles */
+div[class*="leva__picker"] {
+  position: fixed !important;
+  z-index: 10000 !important;
+}
